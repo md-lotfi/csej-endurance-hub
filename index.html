@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSEJ | Club Sportif Endurance Jijel</title>
+  <meta name="description" content="Découvrez le Club Sportif Endurance Jijel : course sur piste, trail et HIIT à Jijel.">
+  <meta name="author" content="CSEJ">
+
+  <!-- OpenGraph & Social Cards -->
+  <meta property="og:title" content="CSEJ | Club Sportif Endurance Jijel">
+  <meta property="og:description" content="Course, trail et HIIT. Ensemble, plus loin.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="max-w-7xl px-5 lg:px-8 header-container">
+      <a href="#home" class="brand-link" aria-label="CSEJ Accueil">
+        <img src="./assets/logo.svg" alt="Logo CSEJ" class="brand-logo" width="56" height="56">
+        <div class="brand-text">
+          <strong class="brand-title">CSEJ</strong>
+          <span class="brand-sub">Club Sportif Endurance Jijel</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <a href="#home" class="nav-link">Accueil</a>
+        <a href="#about" class="nav-link">Qui sommes-nous</a>
+        <a href="#programs" class="nav-link">Programmes</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Sélection de la langue">
+          <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="ar">AR</button>
+        </div>
+
+        <a href="#contact" class="btn btn-cta btn-cta-header" data-i18n-join>
+          Rejoignez-nous
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <button type="button" class="btn btn-ghost btn-icon mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu de navigation">
+          <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="iconClose" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <nav class="nav-mobile" id="navMobile" aria-label="Navigation mobile">
+      <a href="#home" class="nav-mobile-link">Accueil</a>
+      <a href="#about" class="nav-mobile-link">Qui sommes-nous</a>
+      <a href="#programs" class="nav-mobile-link">Programmes</a>
+      <a href="#contact" class="nav-mobile-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <img id="heroImg" src="./assets/csej-hero.jpg" alt="Jambes de coureurs démarrant ensemble sur une piste" class="hero-bg-img" width="1920" height="1080" fetchpriority="high">
+      <div class="hero-overlay"></div>
+      <div class="max-w-7xl px-5 lg:px-8 hero-content">
+        <div class="hero-inner">
+          <p class="kicker" id="heroTag"><span class="kicker-line"></span>Club Sportif Endurance Jijel</p>
+          <h1 class="hero-title" id="heroTitle">Excellence. Endurance. Jijel.</h1>
+          <p class="hero-subtitle" id="heroSub">Rejoignez le mouvement.</p>
+          <p class="hero-body" id="heroBody">Courir ensemble. Se dépasser ensemble. Une communauté unie par l’effort, au cœur de Jijel.</p>
+          <a href="#about" class="btn btn-primary btn-lg" id="heroDiscover" style="margin-top: 2rem;">
+            Découvrir le club
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-py bg-background">
+      <div class="max-w-7xl px-5 lg:px-8 about-grid">
+        <div class="about-intro">
+          <div>
+            <p class="section-header-kicker" id="aboutKicker"><span class="kicker-line" style="background-color: var(--primary);"></span>Notre identité</p>
+            <h2 class="section-header-title" id="aboutTitle">Plus qu’un club, une force collective.</h2>
+          </div>
+          <p class="about-text" id="aboutBody">
+            CSEJ rassemble les passionnés de course et d’entraînement fonctionnel à Jijel. Notre mission : rendre l’endurance accessible, cultiver la discipline et avancer ensemble — sur piste, en montagne et au-delà.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <span class="pillar-num">01</span>
+            <h3 class="pillar-title" id="pillarTitle0">Jijel, notre terrain</h3>
+            <p class="pillar-body" id="pillarBody0">De la piste au littoral, nous puisons notre énergie dans un territoire unique.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">02</span>
+            <h3 class="pillar-title" id="pillarTitle1">L’effort partagé</h3>
+            <p class="pillar-body" id="pillarBody1">Chaque séance transforme l’effort individuel en réussite collective.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">03</span>
+            <h3 class="pillar-title" id="pillarTitle2">Héritage algérien</h3>
+            <p class="pillar-body" id="pillarBody2">Fiers de nos couleurs, nous portons les valeurs du sport algérien.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section-py bg-secondary">
+      <div class="max-w-7xl px-5 lg:px-8">
+        <div>
+          <p class="section-header-kicker" id="programsKicker"><span class="kicker-line"></span>Nos disciplines</p>
+          <h2 class="section-header-title" id="programsTitle">Trois terrains. Un même engagement.</h2>
+        </div>
+
+        <div class="programs-grid">
+          <!-- Card 1: Track -->
+          <article class="program-card">
+            <div class="program-media">
+              <img src="./assets/csej-hero.jpg" alt="" loading="lazy" width="1200" height="800" class="program-img">
+              <span class="program-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+              </span>
+            </div>
+            <div class="program-content">
+              <span class="program-num">01</span>
+              <h3 class="program-title" id="programTitle0">Course sur piste</h3>
+              <p class="program-body" id="programBody0">Vitesse, technique et progression mesurée sur piste.</p>
+            </div>
+          </article>
+
+          <!-- Card 2: Trail -->
+          <article class="program-card">
+            <div class="program-media">
+              <img src="./assets/csej-trail.jpg" alt="" loading="lazy" width="1200" height="800" class="program-img">
+              <span class="program-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+              </span>
+            </div>
+            <div class="program-content">
+              <span class="program-num">02</span>
+              <h3 class="program-title" id="programTitle1">Trail endurance</h3>
+              <p class="program-body" id="programBody1">Dénivelé, nature et résistance sur les sentiers de Jijel.</p>
+            </div>
+          </article>
+
+          <!-- Card 3: HIIT -->
+          <article class="program-card">
+            <div class="program-media">
+              <img src="./assets/csej-hiit.jpg" alt="" loading="lazy" width="1200" height="800" class="program-img">
+              <span class="program-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </span>
+            </div>
+            <div class="program-content">
+              <span class="program-num">03</span>
+              <h3 class="program-title" id="programTitle2">HIIT & conditionnement</h3>
+              <p class="program-body" id="programBody2">Des intervalles intenses pour développer puissance et agilité.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section-py bg-background">
+      <div class="max-w-7xl px-5 lg:px-8">
+        <div>
+          <p class="section-header-kicker" id="scheduleKicker"><span class="kicker-line"></span>Rythme hebdomadaire</p>
+          <h2 class="section-header-title" id="scheduleTitle">La semaine CSEJ</h2>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="schedule-table" id="scheduleTable">
+            <thead>
+              <tr>
+                <th scope="col">Jour</th>
+                <th scope="col">Séance</th>
+                <th scope="col">Horaire</th>
+                <th scope="col">Remarques</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-day">Samedi</td>
+                <td class="td-session">HIIT & conditionnement</td>
+                <td class="td-time">
+                  <span class="td-time-val">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg>
+                    <span>18:00</span>
+                  </span>
+                </td>
+                <td class="td-remark">Stade de Jijel</td>
+              </tr>
+              <tr>
+                <td class="td-day">Lundi</td>
+                <td class="td-session">Course en extérieur ou Trail endurance (10 à 15 km par groupes)</td>
+                <td class="td-time">
+                  <span class="td-time-val">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg>
+                    <span>17:30</span>
+                  </span>
+                </td>
+                <td class="td-remark">—</td>
+              </tr>
+              <tr>
+                <td class="td-day">Mercredi</td>
+                <td class="td-session">Trail endurance</td>
+                <td class="td-time">
+                  <span class="td-time-val">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg>
+                    <span>18:00</span>
+                  </span>
+                </td>
+                <td class="td-remark">Point de départ communiqué</td>
+              </tr>
+              <tr>
+                <td class="td-day">Vendredi</td>
+                <td class="td-session">Sortie collective</td>
+                <td class="td-time">
+                  <span class="td-time-val">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg>
+                    <span>06:30</span>
+                  </span>
+                </td>
+                <td class="td-remark">Jijel</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-py bg-background">
+      <div class="max-w-7xl px-5 lg:px-8 contact-grid">
+        <div>
+          <div>
+            <p class="section-header-kicker" id="contactKicker"><span class="kicker-line"></span>Prenez le départ</p>
+            <h2 class="section-header-title" id="contactTitle">Votre prochaine foulée commence ici.</h2>
+          </div>
+          <p class="contact-body" id="contactBody">
+            Une question sur les entraînements ou envie de rejoindre le groupe ? Écrivez-nous ou contactez directement un représentant du club.
+          </p>
+
+          <h3 class="reps-heading" id="repsHeading">Représentants officiels</h3>
+          <div class="reps-grid">
+            <a href="tel:+213669132439" class="contact-card">
+              <span class="rep-name">Mechtar Hamza</span>
+              <span class="rep-phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +213 669 13 24 39
+              </span>
+            </a>
+            <a href="tel:+213551056686" class="contact-card">
+              <span class="rep-name">Laissaoui Ferhat</span>
+              <span class="rep-phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +213 551 05 66 86
+              </span>
+            </a>
+          </div>
+
+          <div class="location-box">
+            <p class="location-label" id="locationLabel">Notre point de rencontre</p>
+            <p class="location-place">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Jijel, Algérie
+            </p>
+            <a href="https://maps.google.com/?q=36.82193933022667,5.770131368649796" target="_blank" rel="noreferrer" class="location-link" id="mapLink">Voir sur Google Maps</a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="contact-form" id="contactForm">
+          <div class="form-grid">
+            <label class="form-label">
+              <span class="form-label-text" id="labelName">Nom complet</span>
+              <input required name="name" type="text" class="form-input">
+            </label>
+            <label class="form-label">
+              <span class="form-label-text" id="labelEmail">E-mail</span>
+              <input required name="email" type="email" class="form-input">
+            </label>
+            <label class="form-label sm-col-span-2">
+              <span class="form-label-text" id="labelPhone">Téléphone</span>
+              <input required name="phone" type="tel" class="form-input">
+            </label>
+            <label class="form-label sm-col-span-2">
+              <span class="form-label-text" id="labelMessage">Votre message</span>
+              <textarea required rows="5" name="message" class="form-textarea"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-cta btn-lg btn-form-submit" id="formSubmitBtn">
+            Envoyer le message
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="max-w-7xl px-5 lg:px-8 footer-container">
+      <div class="footer-brand">
+        <img src="./assets/logo.svg" alt="CSEJ" width="52" height="52" class="footer-logo">
+        <div>
+          <strong class="footer-brand-title">CSEJ</strong>
+          <span class="footer-tagline" id="footerTagline">Ensemble, plus loin.</span>
+        </div>
+      </div>
+
+      <div class="footer-phones">
+        <a href="tel:+213669132439">+213 669 13 24 39</a>
+        <span class="footer-bullet">•</span>
+        <a href="tel:+213551056686">+213 551 05 66 86</a>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-lang-group">
+          <button type="button" class="footer-lang-btn" data-lang="fr">FR</button>
+          <span>/</span>
+          <button type="button" class="footer-lang-btn" data-lang="ar">AR</button>
+        </div>
+        <p class="footer-copyright" id="footerLegal">Club Sportif Endurance Jijel © 2024</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

@@ -37,7 +37,7 @@ const copy = {
     scheduleKicker: "Rythme hebdomadaire", scheduleTitle: "La semaine CSEJ", day: "Jour", session: "Séance", time: "Horaire", remark: "Remarques",
     rows: [
       ["Samedi", "HIIT & conditionnement", "18:00", "Stade de Jijel"],
-      ["Lundi", "Course en extérieur ou Trail endurance (10 à 15 km par groupes)", "15:30", "—"],
+      ["Lundi", "Course en extérieur ou Trail endurance (10 à 15 km par groupes)", "17:30", "—"],
       ["Mercredi", "Trail endurance", "18:00", "Point de départ communiqué"],
       ["Vendredi", "Sortie collective", "06:30", "Jijel"],
     ],
@@ -56,7 +56,7 @@ const copy = {
     scheduleKicker: "الإيقاع الأسبوعي", scheduleTitle: "أسبوع CSEJ", day: "اليوم", session: "التدريب", time: "التوقيت", remark: "ملاحظات",
     rows: [
       ["السبت", "HIIT وتكييف بدني", "18:00", "ملعب جيجل"],
-      ["الاثنين", "الجري الخارجي أو الجري الجبلي للتحمل (10 إلى 15 كلم حسب المجموعات)", "15:30", "—"],
+      ["الاثنين", "الجري الخارجي أو الجري الجبلي للتحمل (10 إلى 15 كلم حسب المجموعات)", "17:30", "—"],
       ["الأربعاء", "الجري الجبلي للتحمل (Trail endurance)", "18:00", "نقطة الانطلاق تُعلن لاحقا"],
       ["الجمعة", "خرجة جماعية", "06:30", "جيجل"],
     ],

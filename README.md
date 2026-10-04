@@ -76,13 +76,21 @@ Continue developing this project in the [Lovable editor](https://lovable.dev/pro
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.
 - **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
-## Development
+## GitHub Pages Deployment
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+This repository is ready for instant hosting on **GitHub Pages**:
+- **Option 1 (Branch Deploy)**: In your GitHub repository, navigate to **Settings > Pages**. Under **Build and deployment**, select **Deploy from a branch**, choose branch **`main`**, and set folder to **`/ (root)`**.
+- **Option 2 (GitHub Actions)**: In **Settings > Pages**, set **Source** to **GitHub Actions**. The included `.github/workflows/deploy.yml` workflow will automatically build and publish the site on every push to `main`.
 
+## Local Development & Preview
+
+To preview the static site locally with any static server:
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+# Using Python
+python3 -m http.server 8080
+
+# Or using Node / npx
+npx serve .
 ```
+Then open `http://localhost:8080` in your browser.
+
