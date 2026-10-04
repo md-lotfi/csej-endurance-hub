@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the CSEJ showcase as a single-page bilingual experience; language switching is client-side because all club content is static and public.
