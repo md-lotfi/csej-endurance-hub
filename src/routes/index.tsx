@@ -147,11 +147,25 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-primary py-24 text-primary-foreground">
+      <section className="bg-background py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <SectionTitle kicker={t.scheduleKicker} title={t.scheduleTitle} inverse />
-          <div className="mt-12 overflow-x-auto border border-primary-foreground/25">
-            <table className="w-full min-w-180 text-start"><thead className="bg-primary-foreground/10 text-xs uppercase"><tr>{[t.day, t.session, t.time, t.place].map((h) => <th key={h} className="px-6 py-4 text-start font-bold">{h}</th>)}</tr></thead><tbody>{t.rows.map((row) => <tr key={row[0]} className="border-t border-primary-foreground/20">{row.map((cell, index) => <td key={cell} className={`px-6 py-5 text-sm ${index === 0 ? "font-bold text-primary-foreground" : "text-primary-foreground/75"}`}>{index === 2 && <Clock3 className="me-2 inline size-4 text-accent" />}{cell}</td>)}</tr>)}</tbody></table>
+          <SectionTitle kicker={t.scheduleKicker} title={t.scheduleTitle} />
+          <div className="mt-12 overflow-x-auto border border-border">
+            <table className="w-full min-w-200 border-collapse text-start">
+              <thead className="bg-primary text-xs uppercase text-primary-foreground">
+                <tr>{[t.day, t.session, t.time, t.remark].map((h) => <th key={h} scope="col" className="px-6 py-4 text-start font-bold">{h}</th>)}</tr>
+              </thead>
+              <tbody>
+                {t.rows.map(([day, session, time, remark], index) => (
+                  <tr key={day} className={index % 2 ? "bg-secondary" : "bg-background"}>
+                    <td className="border-s-4 border-accent px-6 py-5 text-sm font-extrabold whitespace-nowrap text-accent">{day}</td>
+                    <td className="px-6 py-5 text-sm font-semibold text-primary">{session}</td>
+                    <td className="px-6 py-5 text-sm"><span dir="ltr" className="inline-flex items-center gap-2 font-bold text-primary"><Clock3 className="size-4 shrink-0 text-accent" />{time}</span></td>
+                    <td className="px-6 py-5 text-sm text-muted-foreground">{remark}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
