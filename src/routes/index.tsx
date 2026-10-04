@@ -34,8 +34,13 @@ const copy = {
     pillars: [["Jijel, notre terrain", "De la piste au littoral, nous puisons notre énergie dans un territoire unique."], ["L’effort partagé", "Chaque séance transforme l’effort individuel en réussite collective."], ["Héritage algérien", "Fiers de nos couleurs, nous portons les valeurs du sport algérien."]],
     programsKicker: "Nos disciplines", programsTitle: "Trois terrains. Un même engagement.",
     programs: [["Course sur piste", "Vitesse, technique et progression mesurée sur piste."], ["Trail endurance", "Dénivelé, nature et résistance sur les sentiers de Jijel."], ["HIIT & conditionnement", "Des intervalles intenses pour développer puissance et agilité."]],
-    scheduleKicker: "Rythme hebdomadaire", scheduleTitle: "La semaine CSEJ", day: "Jour", session: "Séance", time: "Horaire", place: "Lieu",
-    rows: [["Lundi", "Course sur piste", "18:00 – 19:30", "Stade de Jijel"], ["Mercredi", "HIIT & conditionnement", "18:00 – 19:15", "Stade de Jijel"], ["Vendredi", "Trail endurance", "07:00 – 09:30", "Point communiqué"], ["Samedi", "Sortie collective", "07:30 – 09:00", "Jijel"]],
+    scheduleKicker: "Rythme hebdomadaire", scheduleTitle: "La semaine CSEJ", day: "Jour", session: "Séance", time: "Horaire", remark: "Remarques",
+    rows: [
+      ["Samedi", "HIIT & conditionnement", "18:00", "Stade de Jijel"],
+      ["Lundi", "Course en extérieur ou Trail endurance (10 à 15 km par groupes)", "15:30", "—"],
+      ["Mercredi", "Trail endurance", "18:00", "Point de départ communiqué"],
+      ["Vendredi", "Sortie collective", "06:30", "Jijel"],
+    ],
     contactKicker: "Prenez le départ", contactTitle: "Votre prochaine foulée commence ici.", contactBody: "Une question sur les entraînements ou envie de rejoindre le groupe ? Écrivez-nous ou contactez directement un représentant du club.",
     name: "Nom complet", email: "E-mail", phone: "Téléphone", message: "Votre message", send: "Envoyer le message", sent: "Message prêt à être envoyé !", reps: "Représentants officiels", location: "Notre point de rencontre", map: "Voir sur Google Maps", footer: "Ensemble, plus loin.", legal: "Club Sportif Endurance Jijel © 2024",
   },
@@ -48,8 +53,13 @@ const copy = {
     pillars: [["جيجل، ملعبنا", "من المضمار إلى الساحل، نستمد طاقتنا من أرض فريدة."], ["الجهد المشترك", "كل حصة تحول الجهد الفردي إلى نجاح جماعي."], ["إرث جزائري", "نعتز بألواننا ونحمل قيم الرياضة الجزائرية."]],
     programsKicker: "تخصصاتنا", programsTitle: "ثلاثة ميادين. التزام واحد.",
     programs: [["الجري على المضمار", "السرعة والتقنية والتطور المدروس على المضمار."], ["التحمل الجبلي", "الطبيعة والمرتفعات والمقاومة على مسارات جيجل."], ["التمارين المكثفة", "فترات عالية الشدة لتطوير القوة والرشاقة."]],
-    scheduleKicker: "الإيقاع الأسبوعي", scheduleTitle: "أسبوع CSEJ", day: "اليوم", session: "الحصة", time: "التوقيت", place: "المكان",
-    rows: [["الإثنين", "الجري على المضمار", "18:00 – 19:30", "ملعب جيجل"], ["الأربعاء", "تمارين مكثفة", "18:00 – 19:15", "ملعب جيجل"], ["الجمعة", "التحمل الجبلي", "07:00 – 09:30", "يُعلن لاحقاً"], ["السبت", "خرجة جماعية", "07:30 – 09:00", "جيجل"]],
+    scheduleKicker: "الإيقاع الأسبوعي", scheduleTitle: "أسبوع CSEJ", day: "اليوم", session: "التدريب", time: "التوقيت", remark: "ملاحظات",
+    rows: [
+      ["السبت", "HIIT وتكييف بدني", "18:00", "ملعب جيجل"],
+      ["الاثنين", "الجري الخارجي أو الجري الجبلي للتحمل (10 إلى 15 كلم حسب المجموعات)", "15:30", "—"],
+      ["الأربعاء", "الجري الجبلي للتحمل (Trail endurance)", "18:00", "نقطة الانطلاق تُعلن لاحقا"],
+      ["الجمعة", "خرجة جماعية", "06:30", "جيجل"],
+    ],
     contactKicker: "خذ الانطلاقة", contactTitle: "خطوتك القادمة تبدأ هنا.", contactBody: "هل لديك سؤال حول التدريبات أو ترغب في الانضمام؟ راسلنا أو اتصل مباشرة بأحد ممثلي النادي.",
     name: "الاسم الكامل", email: "البريد الإلكتروني", phone: "الهاتف", message: "رسالتك", send: "إرسال الرسالة", sent: "رسالتك جاهزة للإرسال!", reps: "الممثلون الرسميون", location: "نقطة تجمعنا", map: "افتح في خرائط Google", footer: "معاً، إلى أبعد مدى.", legal: "النادي الرياضي للتحمل جيجل © 2024",
   },
@@ -137,11 +147,25 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-primary py-24 text-primary-foreground">
+      <section className="bg-background py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <SectionTitle kicker={t.scheduleKicker} title={t.scheduleTitle} inverse />
-          <div className="mt-12 overflow-x-auto border border-primary-foreground/25">
-            <table className="w-full min-w-180 text-start"><thead className="bg-primary-foreground/10 text-xs uppercase"><tr>{[t.day, t.session, t.time, t.place].map((h) => <th key={h} className="px-6 py-4 text-start font-bold">{h}</th>)}</tr></thead><tbody>{t.rows.map((row) => <tr key={row[0]} className="border-t border-primary-foreground/20">{row.map((cell, index) => <td key={cell} className={`px-6 py-5 text-sm ${index === 0 ? "font-bold text-primary-foreground" : "text-primary-foreground/75"}`}>{index === 2 && <Clock3 className="me-2 inline size-4 text-accent" />}{cell}</td>)}</tr>)}</tbody></table>
+          <SectionTitle kicker={t.scheduleKicker} title={t.scheduleTitle} />
+          <div className="mt-12 overflow-x-auto border border-border">
+            <table className="w-full min-w-200 border-collapse text-start">
+              <thead className="bg-primary text-xs uppercase text-primary-foreground">
+                <tr>{[t.day, t.session, t.time, t.remark].map((h) => <th key={h} scope="col" className="px-6 py-4 text-start font-bold">{h}</th>)}</tr>
+              </thead>
+              <tbody>
+                {t.rows.map(([day, session, time, remark], index) => (
+                  <tr key={day} className={index % 2 ? "bg-secondary" : "bg-background"}>
+                    <td className="border-s-4 border-accent px-6 py-5 text-sm font-extrabold whitespace-nowrap text-accent">{day}</td>
+                    <td className="px-6 py-5 text-sm font-semibold text-primary">{session}</td>
+                    <td className="px-6 py-5 text-sm"><span dir="ltr" className="inline-flex items-center gap-2 font-bold text-primary"><Clock3 className="size-4 shrink-0 text-accent" />{time}</span></td>
+                    <td className="px-6 py-5 text-sm text-muted-foreground">{remark}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
