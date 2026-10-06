@@ -17,6 +17,9 @@
       heroSub: "Rejoignez le mouvement.",
       heroBody: "Courir ensemble. Se dépasser ensemble. Une communauté unie par l’effort, au cœur de Jijel.",
       discover: "Découvrir le club",
+      eventKicker: "Événement",
+      eventTitle: "Semi-Marathon de Bejaia 2026",
+      eventAlt: "Objectif : Semi-Marathon de Bejaia 2026 - À la mémoire des martyrs des incendies de Jijel - Club Endurance Jijel",
       aboutKicker: "Notre identité",
       aboutTitle: "Plus qu’un club, une force collective.",
       aboutBody: "CSEJ rassemble les passionnés de course et d’entraînement fonctionnel à Jijel. Notre mission : rendre l’endurance accessible, cultiver la discipline et avancer ensemble — sur piste, en montagne et au-delà.",
@@ -67,6 +70,9 @@
       heroSub: "انضم إلى الحركة.",
       heroBody: "نركض معاً. نتجاوز حدودنا معاً. مجتمع يوحّده الجهد في قلب جيجل.",
       discover: "اكتشف النادي",
+      eventKicker: "الحدث",
+      eventTitle: "نصف ماراثون بجاية 2026",
+      eventAlt: "الهدف: نصف ماراثون بجاية 2026 - تخليداً لذكرى شهداء حرائق جيجل - نادي التحمل جيجل",
       aboutKicker: "هويتنا",
       aboutTitle: "أكثر من نادٍ، قوة جماعية.",
       aboutBody: "يجمع نادي CSEJ عشاق الجري والتدريب الوظيفي في جيجل. مهمتنا هي جعل رياضة التحمل متاحة للجميع، وتنمية الانضباط والتقدم معاً على المضمار وفي الجبال وما بعدها.",
@@ -180,6 +186,23 @@
     if (heroDiscover) {
       const arrow = heroDiscover.querySelector("svg");
       heroDiscover.childNodes[0].textContent = t.discover + " ";
+    }
+
+    // Event
+    const eventKicker = document.getElementById("eventKicker");
+    if (eventKicker) {
+      const line = eventKicker.querySelector(".kicker-line");
+      eventKicker.textContent = "";
+      if (line) eventKicker.appendChild(line);
+      eventKicker.appendChild(document.createTextNode(" " + t.eventKicker));
+    }
+
+    const eventTitle = document.getElementById("eventTitle");
+    if (eventTitle) eventTitle.textContent = t.eventTitle;
+
+    const eventBannerImg = document.getElementById("eventBannerImg");
+    if (eventBannerImg && t.eventAlt) {
+      eventBannerImg.setAttribute("alt", t.eventAlt);
     }
 
     // About
